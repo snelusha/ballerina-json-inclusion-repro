@@ -19,8 +19,9 @@ public type AmountBreakdown record {
 
 public type AmountWithBreakdown record {
     *Money;
-    @jsondata:Name {value: "currency_code"}
-    CurrencyCode currencyCode;
+    // Temporary workaround for the issue with annotations
+    // @jsondata:Name {value: "currency_code"}
+    // CurrencyCode currencyCode;
     AmountBreakdown breakdown?;
 };
 
